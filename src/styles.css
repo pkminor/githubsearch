@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body {background-color:#EBEFF2;user-select:none;font-family: "Trebuchet MS", Helvetica, sans-serif;}
+
+.githubsearchbar{background-color:#24292D}
+.githubsearchnav{position:fixed;top:0;left:0;width:20%;height:100%;overflow:auto;}
+.githubsearchmain{width:60%;margin:auto;}
