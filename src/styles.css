@@ -2,8 +2,8 @@
 body {background-color:#EBEFF2;user-select:none;font-family: "Trebuchet MS", Helvetica, sans-serif;}
 
 .githubsearchbar{background-color:#24292D}
-.githubsearchprofile{position:fixed;top:0;left:0;width:20%;height:100%;overflow:auto;background-color:white}
-.githubsearchmain{width:60%;margin:auto;}
+.githubsearchprofile{position:fixed;top:3rem!important;left:0;width:25%;height:100%;overflow:auto;}
+.githubsearchmain{width:50%;margin:auto;}
 
 .bg-input-sh {
    border-color: #627C33;
@@ -21,3 +21,6 @@ body {background-color:#EBEFF2;user-select:none;font-family: "Trebuchet MS", Hel
   .border-r-0 {border-radius:0;}
 
  .vr-round {font-family: 'Varela Round', sans-serif;}
+ .barbel {font-size:25px;}
+
+ .bg-dsb {background-color:#EBEFF2;}
