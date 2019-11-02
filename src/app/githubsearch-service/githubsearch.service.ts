@@ -24,6 +24,7 @@ export class GithubsearchService {
           this.user.id=results["id"];
           this.user.username=results["login"];
           this.user.avatar=results["avatar_url"];
+          this.user.url=results["url"];
           this.user.repos=results["public_repos"];
           this.user.followers=results["followers"];
           this.user.following=results["following"];
