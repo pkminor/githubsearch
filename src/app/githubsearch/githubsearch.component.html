@@ -1,3 +1,16 @@
 <div class="githubsearchmain mt-5">
-  <app-githubsearch-form></app-githubsearch-form>
+  <app-githubsearch-form (searchEvent)='searchGithub($event)'></app-githubsearch-form>
+
+  {{user.id}} {{user.username}} {{user.avatar}}
+  <div *ngIf='repositories'>
+    <div *ngFor='let repo of repositories; let i=index'>
+      <div class="card shadow p-3 mb-2">
+        <div class="">{{repo.id}}</div>
+        <div class="">{{repo.title}}</div>
+        <div class="">{{repo.url}}</div>
+      </div>
+    </div>
+  </div>
+
+
 </div>

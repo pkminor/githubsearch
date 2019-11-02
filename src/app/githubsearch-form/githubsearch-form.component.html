@@ -1,15 +1,21 @@
-<form #searchForm='ngForm' (onSubmit)='searchGithub()'>
-  <div class="input-group">
-    <div class="input-group-prepend">
-      <select name="searchtype" id="searchtype"
-              #searchtype='ngModel' [(ngModel)]='searchType'
-              class="custom-select bg-success text-white font-weight-bolder vr-round bg-input-sh-focus border-r-0">
-              <option value="users" selected>Users</option>
-              <option value="repos">Repositories</option>
-      </select>
+<div class="mb-3">
+  <form #searchForm='ngForm' (ngSubmit)='searchGithub()'>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <select name="searchtype" id="searchtype"
+                #searchtype='ngModel' [(ngModel)]='searchType'
+                class="custom-select bg-success text-white font-weight-bolder vr-round bg-input-sh-focus border-r-0">
+                <option value="user" selected>User</option>
+                <option value="repos">User Repositories</option>
+        </select>
+      </div>
+      <input type="text" name="search" id="search" #search='ngModel'
+           [(ngModel)]='searchTerm'
+           class="form-control bg-input-sh-focus">
+      <div class="input-group-append">
+             <button class="btn btn-success">Search</button>
+      </div>
     </div>
-    <input type="text" name="search" id="search" #search='ngModel'
-         [(ngModel)]='searchTerm'
-         class="form-control bg-input-sh-focus">
-  </div>
-</form>
+
+  </form>
+</div>

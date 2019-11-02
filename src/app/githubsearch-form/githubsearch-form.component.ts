@@ -15,12 +15,15 @@ export class GithubsearchFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   searchGithub()
   {
+    //alert(this.searchType +" : "+ this.searchTerm)
     if(this.searchType && this.searchTerm)
        this.searchEvent.emit({type:this.searchType,query:this.searchTerm});
+    else alert("no search");
   }
 
 }
