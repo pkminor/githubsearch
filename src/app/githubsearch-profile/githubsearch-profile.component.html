@@ -1,0 +1,22 @@
+<div class="githubsearchprofile">
+  <div class="card mt-4 mx-3 shadow-sm">
+    <div class="card-body text-center">
+      <div class="row">
+        <div class="col">
+          <img src="{{user.avatar}}" alt="" style="height:50px;width:50px" class="rounded-circle">
+        </div>
+        <div class="col">
+          <div class="row"><span class="badge bg-dsb p-2 font-weight-bolder mb-1">Username: {{user.username}}</span></div>
+          <div class="row"><span class="badge bg-dsb p-2 font-weight-bolder mb-1">Id: {{user.id}}</span></div>
+          <div class="row"><span class="badge bg-dsb p-2 font-weight-bolder mb-1">Repos: {{user.repos}}</span></div>
+          <div class="row"><span class="badge bg-dsb p-2 font-weight-bolder mb-1">Followers: {{user.followers}}</span></div>
+          <div class="row"><span class="badge bg-dsb p-2 font-weight-bolder mb-1">Following: {{user.following}}</span></div>
+          <div class="row"><span class="badge bg-dsb p-2 font-weight-bolder mb-1">Updated: {{user.updated}}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      Created on {{user.created}}
+    </div>
+  </div>
+</div>
