@@ -11,6 +11,7 @@ import {environment} from '../../environments/environment';
 })
 export class GithubsearchComponent implements OnInit {
 
+ native:User;
  user:User;
  repositories:Repository[]=[];
  searchType:string="home";
@@ -19,8 +20,9 @@ export class GithubsearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.searchGithub({type:"repos",query:"pkminor"});
+
     this.searchGithub({type:"user",query:"pkminor"});
+    this.searchGithub({type:"repos",query:"pkminor"});
   }
 
   searchGithub(search:any){
