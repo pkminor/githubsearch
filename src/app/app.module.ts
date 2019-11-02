@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { GithubsearchBarComponent } from './githubsearch-bar/githubsearch-bar.component';
 import { GithubsearchComponent } from './githubsearch/githubsearch.component';
 import { GithubsearchFormComponent } from './githubsearch-form/githubsearch-form.component';
+import { GithubsearchProfileComponent } from './githubsearch-profile/githubsearch-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubsearchBarComponent,
     GithubsearchComponent,
-    GithubsearchFormComponent
+    GithubsearchFormComponent,
+    GithubsearchProfileComponent
   ],
   imports: [
     BrowserModule,
