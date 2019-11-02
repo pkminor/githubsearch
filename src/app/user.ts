@@ -6,6 +6,7 @@ export class User {
   public id:number;
   public username:string;
   public avatar:string;
+  public url:string;
   public repos:number;
   public followers:number;
   public following:number;
