@@ -15,7 +15,7 @@ export class GithubsearchService {
 
   getUser(user:string){
 
-    let url="https://api.github.com/users/"+user+"?access_token=" + environment.github_key;
+    let url="https://api.github.com/users/"+user+"?access_token=" + environment.githubKey;
 
     let promise = new Promise( (resolve,reject)=>{
       this.http.get(url).toPromise().then(
@@ -46,11 +46,11 @@ export class GithubsearchService {
 
   getUserRepositories(user){
     this.repositories=[];
-    let url="https://api.github.com/users/"+user+"/repos?access_token=" + environment.github_key;
+    let urlink="https://api.github.com/users/"+user+"/repos?access_token=" + environment.githubKey;
 
     //interface ApiResponse{data:[{id:number;name:string;html_url:string}]}
     let promise = new Promise( (resolve,reject)=>{
-      this.http.get(url).toPromise().then(
+      this.http.get(urlink).toPromise().then(
         (results)=>{
           //if(!results) results=[{"id":0,"name":"empty","html_url":"empty"}];
           results.forEach((repo)=>{ //let repo=results.data; //
