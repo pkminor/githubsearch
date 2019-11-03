@@ -11,6 +11,7 @@ import { GithubsearchFormComponent } from './githubsearch-form/githubsearch-form
 import { GithubsearchProfileComponent } from './githubsearch-profile/githubsearch-profile.component';
 import { GithubsearchDetailsComponent } from './githubsearch-details/githubsearch-details.component';
 import { UnderlineDirective } from './underline.directive';
+import { DayCountPipe } from './day-count.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UnderlineDirective } from './underline.directive';
     GithubsearchFormComponent,
     GithubsearchProfileComponent,
     GithubsearchDetailsComponent,
-    UnderlineDirective
+    UnderlineDirective,
+    DayCountPipe
   ],
   imports: [
     BrowserModule,
