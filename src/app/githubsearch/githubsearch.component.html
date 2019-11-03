@@ -4,18 +4,35 @@
   <app-githubsearch-form (searchEvent)='searchGithub($event)'></app-githubsearch-form>
 
   <div *ngIf='searchType=="user"; else repos'>
-    {{user.id}} {{user.username}} {{user.avatar}} {{user.url}}
+    <!-- {{user.id}} {{user.username}} {{user.avatar}} {{user.url}} -->
+    <div class="card shadow-sm -p3">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-1">
+            <img src="{{user.avatar}}" alt="" style="height:50px;width:50px" class="rounded-circle">
+          </div>
+          <div class="col-11">
+            <div class="card-title"> <span class="badge p-2 bg-dsb">{{user.username}} <span class="badge p-2 mx-1 badge-primary">{{user.repos}}</span></span> </div>
+            <div class="card-text" (click)='viewRepositories(user.username)'>Github Repositories</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <ng-template #repos>
     <div *ngIf='repositories' >
       <div *ngFor='let repo of repositories; let i=index'>
         <div class="card shadow-sm p-3 mb-2">
-          <div class="">{{repo.title}}</div>
-          <div class=""><a href="{{repo.url}}">{{repo.url}}</a></div>
+          <div class="card-title">{{repo.title}}</div>
+          <div class="card-text"><a href="{{repo.url}}">{{repo.url}}</a></div>
         </div>
       </div>
     </div>
   </ng-template>
 
 </div>
+<!--
+--directive -> bold shading
+--pipe -> updated : days months years ago
+  -->

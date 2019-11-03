@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { GithubsearchService } from '../githubsearch-service/githubsearch.service';
 import {User} from '../user';
 import {Repository} from '../repository';
 import {environment} from '../../environments/environment';
+
 
 @Component({
   selector: 'app-githubsearch',
@@ -16,15 +19,18 @@ export class GithubsearchComponent implements OnInit {
  repositories:Repository[]=[];
  searchType:string="home";
 
-  constructor(private searchservice:GithubsearchService) {
+  constructor(private router:Router, private searchservice:GithubsearchService) {
   }
 
   ngOnInit() {
 
     this.searchGithub({type:"user",query:"pkminor"});
-    this.searchGithub({type:"repos",query:"pkminor"});
+    //this.searchGithub({type:"repos",query:"pkminor"});
   }
 
+  viewRepositories(username:string){
+    this.router.navigate(['/details',username]);
+  }
   searchGithub(search:any){
 
     this.searchType=search.type;
@@ -51,4 +57,7 @@ export class GithubsearchComponent implements OnInit {
 
 
   }
+
+
+
 }
