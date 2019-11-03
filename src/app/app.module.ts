@@ -10,6 +10,7 @@ import { GithubsearchComponent } from './githubsearch/githubsearch.component';
 import { GithubsearchFormComponent } from './githubsearch-form/githubsearch-form.component';
 import { GithubsearchProfileComponent } from './githubsearch-profile/githubsearch-profile.component';
 import { GithubsearchDetailsComponent } from './githubsearch-details/githubsearch-details.component';
+import { UnderlineDirective } from './underline.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GithubsearchDetailsComponent } from './githubsearch-details/githubsearc
     GithubsearchComponent,
     GithubsearchFormComponent,
     GithubsearchProfileComponent,
-    GithubsearchDetailsComponent
+    GithubsearchDetailsComponent,
+    UnderlineDirective
   ],
   imports: [
     BrowserModule,

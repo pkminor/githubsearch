@@ -12,7 +12,7 @@
             <img src="{{user.avatar}}" alt="" style="height:50px;width:50px" class="rounded-circle">
           </div>
           <div class="col-11">
-            <div class="card-title"> <span class="badge p-2 bg-dsb">{{user.username}} <span class="badge p-2 mx-1 badge-primary">{{user.repos}}</span></span> </div>
+            <div class="card-title"> <span class="badge p-2 bg-dsb" appUnderline>{{user.username}} <span class="badge p-2 mx-1 badge-primary">{{user.repos}}</span></span> </div>
             <div class="card-text" (click)='viewRepositories(user.username)'>Github Repositories</div>
           </div>
         </div>
