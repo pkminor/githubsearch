@@ -5,8 +5,7 @@ import { GithubsearchDetailsComponent } from './githubsearch-details/githubsearc
 
 const routes: Routes = [
   {path:'search',component:GithubsearchComponent},
-  {path:'',component:GithubsearchComponent},
-  {path:'details/:user',component:GithubsearchDetailsComponent}
+  {path:'details/:user',component:GithubsearchDetailsComponent},
 ];
 
 @NgModule({
