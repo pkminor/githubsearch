@@ -4,7 +4,8 @@ import { GithubsearchComponent } from './githubsearch/githubsearch.component';
 import { GithubsearchDetailsComponent } from './githubsearch-details/githubsearch-details.component';
 
 const routes: Routes = [
-  {path:'search',component:GithubsearchDetailsComponent},
+  {path:'search',component:GithubsearchComponent},
+  {path:'',component:GithubsearchComponent},
   {path:'details/:user',component:GithubsearchDetailsComponent}
 ];
 
