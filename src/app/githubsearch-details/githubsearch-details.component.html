@@ -1,7 +1,7 @@
 <div class="githubsearchmain mt-3" *ngIf='repositories'>
   <div *ngFor='let repo of repositories; let i=index'>
     <div class="card shadow-sm p-3 mb-2">
-      <div class="card-title" appUnderline>{{repo.title}}</div>
+      <div class="card-title" appUnderline>{{repo.name}}</div>
       <div class="card-text"><a href="{{repo.url}}">{{repo.url}}</a></div>
     </div>
   </div>
