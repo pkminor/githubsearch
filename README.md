@@ -1,4 +1,4 @@
-# Application link [Github search](https://pkminor.github.io/githubsearch/)
+# Application link [Github search](https://pkminor.github.io/githubsearch/search)
 
 Author [Patrick Maina](https://github.com/pkminor)
 
