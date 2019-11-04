@@ -25,39 +25,36 @@ export class GithubsearchComponent implements OnInit {
   ngOnInit() {
 
     this.searchGithub({type:"user",query:"pkminor"});
-    //this.searchGithub({type:"repos",query:"pkminor"});
+    this.searchGithub({type:"repos",query:"pkminor"});
   }
 
   viewRepositories(username:string){
     this.router.navigate(['/details',username]);
   }
+
   searchGithub(search:any){
 
     this.searchType=search.type;
 
-    if(search.type=="user"){
+    //opted to fetch both user and repositories to ensure profile card and main content are uniform
+    if(true){
 
       this.searchservice.getUser(search.query).then(
         ()=>{this.user=this.searchservice.user;  },
         (error)=>{}
       );
-
-
     }
 
-    if(search.type=="repos"){
+    if(true){
 
       this.searchservice.getUserRepositories(search.query).then(
-        ()=>{this.repositories=this.searchservice.repositories;},
+        ()=>{ //this.repositories=this.searchservice.repositories;
+          this.repositories = this.searchservice.rs;
+        },
         (error)=>{}
       );
-
-
     }
 
-
   }
-
-
 
 }

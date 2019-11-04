@@ -11,6 +11,7 @@ export class GithubsearchService {
 
   repositories:Repository[]=[];
   user:User;
+  rs:any;
   constructor(private http:HttpClient) { }
 
   getUser(user:string){
@@ -53,13 +54,15 @@ export class GithubsearchService {
       this.http.get(urlink).toPromise().then(
         (results)=>{
           //if(!results) results=[{"id":0,"name":"empty","html_url":"empty"}];
-          results.forEach((repo)=>{ //let repo=results.data; //
+          //results.forEach((repo)=>{ //let repo=results.data; //
           //for(let i=0; i<results.length;i++){
           //  let repo =  results[i];
-            let rp= new Repository(repo["id"],repo["name"], repo["html_url"]);
-            this.repositories.push(rp);
-         });
-    //  }
+            //let rp= new Repository(repo["id"],repo["name"], repo["html_url"]);
+            //this.repositories.push(rp);
+            //console.log(results);
+            this.rs=results;
+         //});
+     //}
 
           resolve();
         },

@@ -12,13 +12,14 @@ import { GithubsearchService } from '../githubsearch-service/githubsearch.servic
 export class GithubsearchDetailsComponent implements OnInit {
 
  repositories:Repository[]=[];
-  constructor(private route:ActivatedRoute,private searchservice:GithubsearchService) {}
+  constructor(private route:ActivatedRoute,private searchservice:GithubsearchService) { }
 
   ngOnInit() {
 
     let username = this.route.snapshot.paramMap.get('user');
+
     this.searchservice.getUserRepositories(username).then(
-      ()=>{this.repositories=this.searchservice.repositories;},
+      ()=>{this.repositories=this.searchservice.rs;},
       (error)=>{}
     );
   }

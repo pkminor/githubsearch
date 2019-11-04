@@ -1,4 +1,4 @@
-<app-githubsearch-profile [user]='user'></app-githubsearch-profile>
+<app-githubsearch-profile *ngIf='user' [user]='user'></app-githubsearch-profile>
 
 <div class="githubsearchmain mt-3">
   <app-githubsearch-form (searchEvent)='searchGithub($event)'></app-githubsearch-form>
@@ -9,12 +9,15 @@
       <div class="card-body">
         <div class="row">
           <div class="col-1">
-            <img src="{{user.avatar}}" alt="" style="height:50px;width:50px" class="rounded-circle">
+            <img src='{{user.avatar}}' alt="" style="height:50px;width:50px" class="rounded-circle">
           </div>
           <div class="col-11">
-            <div class="card-title"> <span class="badge p-2 bg-dsb" appUnderline>{{user.username}}
-              <span class="badge p-2 mx-1 badge-success">{{user.repos}} repos</span></span> </div>
-            <div class="card-title">Created {{user.created|dayCount}} </div>
+            <div class="clearfix">
+              <div class="card-title"> <span class="badge p-2 bg-dsb float-right mr-2" appUnderline>{{user.username}}
+                <span class="badge p-2 mx-1 badge-success ">{{user.repos}} repos</span></span>
+              </div>
+            </div>
+              <div class="card-title">Created {{user.created|dayCount}} </div>
             <div class="card-text" >
               <button class="btn btn-success" (click)='viewRepositories(user.username)'>View Github Repositories</button>
             </div>
@@ -28,8 +31,8 @@
     <div *ngIf='repositories' >
       <div *ngFor='let repo of repositories; let i=index'>
         <div class="card shadow-sm p-3 mb-2">
-          <div class="card-title">{{repo.title}}</div>
-          <div class="card-text"><a href="{{repo.url}}">{{repo.url}}</a></div>
+          <div class="card-title">{{repo["name"]}}</div>
+          <div class="card-text"><a href="{{repo.html_url}}">{{repo["html_url"]}}</a></div>
         </div>
       </div>
     </div>

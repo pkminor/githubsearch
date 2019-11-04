@@ -5,7 +5,7 @@ export class User {
   public repositories:Repository[];
   public id:number;
   public username:string;
-  public avatar:string;
+  public avatar:string="";
   public url:string;
   public repos:number;
   public followers:number;
